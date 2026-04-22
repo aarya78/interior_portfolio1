@@ -1,0 +1,86 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-primary-900 text-white font-sans font-medium rounded-none transition-all duration-300 hover:bg-accent-gold hover:text-primary-900 uppercase tracking-wider;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 border-2 border-primary-900 text-primary-900 font-sans font-medium rounded-none transition-all duration-300 hover:bg-primary-900 hover:text-white uppercase tracking-wider;
+  }
+
+  .btn-outline {
+    @apply px-8 py-3 border border-primary-600 text-primary-900 font-sans font-medium transition-all duration-300 hover:bg-primary-50;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-serif font-semibold text-primary-900 mb-12 text-center;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-primary-600 text-center max-w-2xl mx-auto mb-8;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 px-4 md:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-900 to-accent-gold bg-clip-text text-transparent;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f3f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b827a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b6560;
+}
+
+/* Image Loading */
+img {
+  @apply transition-all duration-300;
+}
+
+img.lazy-load {
+  @apply opacity-0;
+}
+
+img.lazy-load.loaded {
+  @apply opacity-100;
+}
