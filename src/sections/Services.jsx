@@ -18,15 +18,6 @@ const Services = () => {
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
   return (
     <section id="services" className="section-padding bg-white">
       <div className="container-custom">

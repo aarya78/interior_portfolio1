@@ -305,21 +305,24 @@ const Footer = () => {
                         </div>
 
                         <div className="flex items-center gap-1">
-                            {["Privacy Policy", "Terms of Service", "Sitemap"].map(
-                                (item, index, arr) => (
-                                    <span key={item} className="flex items-center gap-1">
-                                        <a
-                                            href="#"
-                                            className="text-primary-400 hover:text-accent-gold transition-colors text-xs px-2 py-1 rounded hover:bg-accent-gold/10"
-                                        >
-                                            {item}
-                                        </a>
-                                        {index < arr.length - 1 && (
-                                            <span className="w-px h-3 bg-primary-600" />
-                                        )}
-                                    </span>
-                                )
-                            )}
+                            {[
+                                { name: "Privacy Policy", href: "#privacy" },
+                                { name: "Terms of Service", href: "#terms" },
+                                { name: "Sitemap", href: "#sitemap" },
+                            ].map((item, index, arr) => (
+                                <span key={item.name} className="flex items-center gap-1">
+                                    <a
+                                        href={item.href}
+                                        className="text-primary-400 hover:text-accent-gold transition-colors text-xs px-2 py-1 rounded hover:bg-accent-gold/10"
+                                    >
+                                        {item.name}
+                                    </a>
+
+                                    {index < arr.length - 1 && (
+                                        <span className="w-px h-3 bg-primary-600" />
+                                    )}
+                                </span>
+                            ))}
                         </div>
 
                         {/* Made with love tag */}
