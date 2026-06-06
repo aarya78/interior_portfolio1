@@ -13,13 +13,16 @@ const Hero = ({ onViewProjects }) => {
   const slides = [slide1, slide2, slide3];
   const [current, setCurrent] = useState(0);
 
+  const totalSlides = slides.length;
+
   useEffect(() => {
     const id = setInterval(() => {
-      setCurrent((s) => (s + 1) % slides.length);
+      setCurrent((s) => (s + 1) % totalSlides);
     }, 6000);
-    return () => clearInterval(id);
-  }, []);
 
+    return () => clearInterval(id);
+  }, [totalSlides]);
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
