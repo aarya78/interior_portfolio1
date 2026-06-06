@@ -18,14 +18,16 @@ const ServiceCard = ({ service, index }) => {
     },
   };
 
+  const Icon = service.icon;
+
   return (
     <motion.div
       variants={containerVariants}
       className="group p-8 md:p-10 bg-white border border-primary-200 hover:border-accent-gold transition-all duration-300 hover:shadow-xl"
     >
       {/* Icon */}
-      <div className="text-5xl md:text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-        {service.icon}
+      <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300 text-accent-gold">
+        {Icon && <Icon className="w-12 h-12 md:w-14 md:h-14" />}
       </div>
 
       {/* Title */}

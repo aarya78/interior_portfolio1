@@ -1,5 +1,32 @@
 // Sample data for the portfolio website
 
+// Local project images
+import img1 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.17 PM (1).jpeg';
+import img2 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.17 PM (2).jpeg';
+import img3 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.17 PM (3).jpeg';
+import img4 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.17 PM (4).jpeg';
+import img5 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.17 PM.jpeg';
+import img6 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.43 PM.jpeg';
+import img7 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.44 PM (1).jpeg';
+import img8 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.44 PM (2).jpeg';
+import img9 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.44 PM (3).jpeg';
+import img10 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.44 PM (4).jpeg';
+import img11 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.44 PM (5).jpeg';
+import img12 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.44 PM.jpeg';
+import img13 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.57 PM.jpeg';
+import img14 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.58 PM (1).jpeg';
+import img15 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.58 PM (2).jpeg';
+import img16 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.58 PM.jpeg';
+import img17 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.43.28 PM (1).jpeg';
+import img18 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.43.28 PM (2).jpeg';
+import img19 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.43.28 PM.jpeg';
+import img20 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.43.29 PM (1).jpeg';
+import img21 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.43.29 PM (2).jpeg';
+import img22 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.43.29 PM.jpeg';
+import img23 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.46.14 PM.jpeg';
+import img24 from '../assets/Projects/WhatsApp Image 2026-04-20 at 1.36.58 PM (2).jpeg';
+import { Briefcase, Palette, Ruler, Hammer, Sofa, Lightbulb } from 'lucide-react';
+
 export const projects = [
   {
     id: 1,
@@ -8,14 +35,16 @@ export const projects = [
     style: "Modern",
     description: "A stunning transformation of a 1500 sq ft apartment with clean lines and contemporary design.",
     shortDescription: "Contemporary living space with minimalist aesthetics",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1629694713667-fa8b2ef3b4fc?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1600210080949-e22b0afb9fc8?w=800&h=600&fit=crop",
+    image: img1,
+    images: [img1, img2, img3, img4],
+    beforeImage: img2,
+    afterImage: img1,
+    imagesMeta: [
+      { src: img1, title: 'Bright Minimal Living', description: 'Open-plan living area with natural light and neutral palette', category: 'Living Room' },
+      { src: img2, title: 'Sleek Kitchen Nook', description: 'Compact, minimalist kitchen with concealed storage', category: 'Kitchen' },
+      { src: img3, title: 'Cozy Bedroom Retreat', description: 'Calm bedroom with layered textures and soft lighting', category: 'Bedroom' },
+      { src: img4, title: 'Textured Accent Wall', description: 'Feature wall adding subtle contrast to the minimalist space', category: 'Detail' },
     ],
-    beforeImage: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop&crop=entropy&cs=tinysrgb&blend=https://images.unsplash.com/photo-1516399519904-f94cb9d4f0d2?w=400&h=300&fit=crop&blend-mode=normal&blend-alpha=0.7",
-    afterImage: "https://images.unsplash.com/photo-1600210080949-e22b0afb9fc8?w=400&h=300&fit=crop",
     duration: "3 months",
     budget: "$45,000",
     tools: ["Minimalist Design", "Neutral Palette", "Smart Storage", "LED Lighting"],
@@ -28,14 +57,16 @@ export const projects = [
     style: "Modern",
     description: "Executive office suite with premium finishes and sophisticated design elements.",
     shortDescription: "High-end corporate workspace",
-    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1497366216548-495a54f42f39?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1517457373614-b7152f800fd1?w=800&h=600&fit=crop",
+    image: img5,
+    images: [img5, img6, img7, img8],
+    beforeImage: img6,
+    afterImage: img5,
+    imagesMeta: [
+      { src: img5, title: 'Executive Suite Overview', description: 'Spacious workspace with premium materials and tailored lighting', category: 'Office' },
+      { src: img6, title: 'Conference Room Elegance', description: 'High-end meeting area with acoustic detailing', category: 'Meeting Room' },
+      { src: img7, title: 'Lounge & Reception', description: 'Welcoming reception with sophisticated finishes', category: 'Reception' },
+      { src: img8, title: 'Detail: Brass Accents', description: 'Material close-up showcasing brass fixtures', category: 'Detail' },
     ],
-    beforeImage: "https://images.unsplash.com/photo-1497366216548-495a54f42f39?w=400&h=300&fit=crop",
-    afterImage: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=300&fit=crop",
     duration: "4 months",
     budget: "$120,000",
     tools: ["Premium Materials", "Ergonomic Furniture", "Executive Design", "Smart Technology"],
@@ -48,14 +79,16 @@ export const projects = [
     style: "Classic",
     description: "Elegant restoration of a historic villa maintaining its classic charm with modern comfort.",
     shortDescription: "Heritage design with contemporary comfort",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+    image: img9,
+    images: [img9, img10, img11, img12],
+    beforeImage: img10,
+    afterImage: img9,
+    imagesMeta: [
+      { src: img9, title: 'Grand Parlor', description: 'Restored parlor with period-appropriate furnishings', category: 'Living Room' },
+      { src: img10, title: 'Ornate Staircase', description: 'Detail of the restored staircase and railing', category: 'Architectural' },
+      { src: img11, title: 'Formal Dining', description: 'Elegant dining area with classic molding and chandelier', category: 'Dining Room' },
+      { src: img12, title: 'Preserved Detail', description: 'Close-up of preserved ornate trim and finishes', category: 'Detail' },
     ],
-    beforeImage: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop",
-    afterImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop",
     duration: "6 months",
     budget: "$250,000",
     tools: ["Heritage Restoration", "Period Furniture", "Ornate Details", "Gold Accents"],
@@ -68,14 +101,16 @@ export const projects = [
     style: "Modern",
     description: "Sophisticated hotel lobby design creating an inviting and luxurious first impression.",
     shortDescription: "Luxury hospitality space",
-    image: "https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=800&h=600&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1576455787622-7a0fb3ce338e?w=800&h=600&fit=crop",
+    image: img13,
+    images: [img13, img14, img15, img16],
+    beforeImage: img14,
+    afterImage: img13,
+    imagesMeta: [
+      { src: img13, title: 'Luxurious Lobby', description: 'Inviting lobby with layered seating and ambient lighting', category: 'Lobby' },
+      { src: img14, title: 'Check-in Experience', description: 'Stylish reception desk with sculptural lighting', category: 'Reception' },
+      { src: img15, title: 'Seating Nook', description: 'Intimate seating arrangement for guests', category: 'Seating' },
+      { src: img16, title: 'Material Palette', description: 'Textures and finishes used throughout the lobby', category: 'Detail' },
     ],
-    beforeImage: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&h=300&fit=crop",
-    afterImage: "https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=400&h=300&fit=crop",
     duration: "5 months",
     budget: "$180,000",
     tools: ["Hospitality Design", "Luxury Fixtures", "Ambient Lighting", "Spatial Planning"],
@@ -88,14 +123,16 @@ export const projects = [
     style: "Modern",
     description: "Multi-functional home studio combining workspace and relaxation in perfect harmony.",
     shortDescription: "Creative home workspace",
-    image: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1593062096033-9a26b09da705?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1554909811-ede7b319513f?w=800&h=600&fit=crop",
+    image: img17,
+    images: [img17, img18, img19, img20],
+    beforeImage: img18,
+    afterImage: img17,
+    imagesMeta: [
+      { src: img17, title: 'Flexible Studio Space', description: 'Open studio with dedicated work and relaxation zones', category: 'Studio' },
+      { src: img18, title: 'Creative Desk Setup', description: 'Ergonomic workstation with natural light', category: 'Workspace' },
+      { src: img19, title: 'Relax Corner', description: 'Comfortable lounging area for breaks and meetings', category: 'Lounge' },
+      { src: img20, title: 'Built-in Storage', description: 'Custom storage that keeps the studio clutter-free', category: 'Storage' },
     ],
-    beforeImage: "https://images.unsplash.com/photo-1593062096033-9a26b09da705?w=400&h=300&fit=crop",
-    afterImage: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&h=300&fit=crop",
     duration: "2 months",
     budget: "$35,000",
     tools: ["Home Office Design", "Ergonomic Setup", "Creative Layout", "Natural Light"],
@@ -108,14 +145,16 @@ export const projects = [
     style: "Classic",
     description: "Full-service restaurant design with exceptional dining atmosphere and functionality.",
     shortDescription: "Fine dining restaurant concept",
-    image: "https://images.unsplash.com/photo-1576866209365-740f6ad8a0cb?w=800&h=600&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1576866209365-740f6ad8a0cb?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1510812431401-41d2cab2707c?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1559339352-11d3b0dcaed2?w=800&h=600&fit=crop",
+    image: img21,
+    images: [img21, img22, img23, img24],
+    beforeImage: img22,
+    afterImage: img21,
+    imagesMeta: [
+      { src: img21, title: 'Intimate Dining Room', description: 'Warm, focused lighting over tables for intimate dining', category: 'Dining' },
+      { src: img22, title: 'Bar & Service', description: 'Thoughtful bar layout supporting smooth service flow', category: 'Bar' },
+      { src: img23, title: 'Table Setting Detail', description: 'Curated table settings and materials', category: 'Detail' },
+      { src: img24, title: 'Open Kitchen Peek', description: 'View into the open kitchen and chef station', category: 'Kitchen' },
     ],
-    beforeImage: "https://images.unsplash.com/photo-1510812431401-41d2cab2707c?w=400&h=300&fit=crop",
-    afterImage: "https://images.unsplash.com/photo-1576866209365-740f6ad8a0cb?w=400&h=300&fit=crop",
     duration: "4 months",
     budget: "$200,000",
     tools: ["Restaurant Design", "Fine Dining Aesthetic", "Acoustic Planning", "Ambient Lighting"],
@@ -127,42 +166,42 @@ export const services = [
   {
     id: 1,
     title: "Interior Consultation",
-    icon: "💼",
+    icon: Briefcase,
     description: "Professional design consultation to understand your vision, space requirements, and aesthetic preferences. We provide expert guidance and personalized recommendations.",
     features: ["Space Analysis", "Design Concepts", "Budget Planning", "Material Selection"]
   },
   {
     id: 2,
     title: "3D Design & Visualization",
-    icon: "🎨",
+    icon: Palette,
     description: "Advanced 3D rendering and visualization services to help you visualize your space before implementation. See your design come to life in stunning detail.",
     features: ["3D Renderings", "Color Schemes", "Material Preview", "Virtual Walkthrough"]
   },
   {
     id: 3,
     title: "Space Planning",
-    icon: "📐",
+    icon: Ruler,
     description: "Strategic space planning to optimize functionality and flow. We maximize your space while maintaining aesthetic appeal and practical usability.",
     features: ["Layout Design", "Furniture Arrangement", "Traffic Flow", "Zoning"]
   },
   {
     id: 4,
     title: "Renovation & Remodeling",
-    icon: "🏗️",
+    icon: Hammer,
     description: "Complete renovation and remodeling services from concept to completion. We manage every detail to ensure a smooth transformation of your space.",
     features: ["Full Renovation", "Project Management", "Contractor Coordination", "Quality Assurance"]
   },
   {
     id: 5,
     title: "Furniture & Decor Styling",
-    icon: "🛋️",
+    icon: Sofa,
     description: "Curated furniture selection and styling to create a cohesive, beautiful interior that reflects your personal style and lifestyle needs.",
     features: ["Furniture Selection", "Decor Styling", "Shopping Service", "Installation Support"]
   },
   {
     id: 6,
     title: "Lighting Design",
-    icon: "💡",
+    icon: Lightbulb,
     description: "Expert lighting design that sets the mood and enhances the functionality of your space. Proper lighting transforms any interior.",
     features: ["Ambient Lighting", "Task Lighting", "Accent Lighting", "Smart Lighting Systems"]
   },

@@ -108,8 +108,8 @@ const Footer = () => {
                             {/* Logo */}
                             <div className="mb-6">
                                 <h3 className="font-serif text-3xl font-semibold">
-                                    Aarya
-                                    <span className="text-accent-gold"> Pandey</span>
+                                    Megha
+                                    <span className="text-accent-gold"> Sahu</span>
                                 </h3>
                                 {/* Gold underline accent */}
                                 <div className="mt-2 flex items-center gap-2">
@@ -223,11 +223,11 @@ const Footer = () => {
                                         <MapPin size={16} className="text-accent-gold" />
                                     </div>
                                     <div>
-                                        <p className="text-white text-xs font-semibold mb-1">Studio Location</p>
+                                        <p className="text-white text-xs font-semibold mb-1">Location</p>
                                         <p className="text-primary-300 text-sm leading-relaxed">
-                                            123 Design Street
+                                            Raipur
                                             <br />
-                                            Creative City, CC 12345
+                                            Chhattisgarh, India, 492001
                                         </p>
                                     </div>
                                 </motion.div>
@@ -244,14 +244,14 @@ const Footer = () => {
                                     <div>
                                         <p className="text-white text-xs font-semibold mb-0.5">Call Us</p>
                                         <p className="text-primary-300 group-hover:text-accent-gold transition-colors text-sm">
-                                            +1 (234) 567-890
+                                            +91 97520 07456
                                         </p>
                                     </div>
                                 </motion.a>
 
                                 {/* Email */}
                                 <motion.a
-                                    href="mailto:hello@aarya.design"
+                                    href="meghasahu765@gmail.com"
                                     whileHover={{ x: 4 }}
                                     className="group flex gap-4 items-center p-4 rounded-xl border border-primary-700/50 bg-primary-800/30 hover:border-accent-gold/40 hover:bg-accent-gold/5 transition-all duration-300"
                                 >
@@ -261,7 +261,7 @@ const Footer = () => {
                                     <div>
                                         <p className="text-white text-xs font-semibold mb-0.5">Email Us</p>
                                         <p className="text-primary-300 group-hover:text-accent-gold transition-colors text-sm">
-                                            hello@aarya.design
+                                            meghasahu765@gmail.com
                                         </p>
                                     </div>
                                 </motion.a>
@@ -299,7 +299,7 @@ const Footer = () => {
                         <div className="flex items-center gap-2 text-primary-400 text-sm">
                             <span>©{currentYear}</span>
                             <span className="w-1 h-1 rounded-full bg-accent-gold" />
-                            <span>Aarya Pandey</span>
+                            <span>Megha Sahu</span>
                             <span className="w-1 h-1 rounded-full bg-accent-gold" />
                             <span>All rights reserved</span>
                         </div>

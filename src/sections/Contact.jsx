@@ -100,10 +100,10 @@ const Contact = () => {
                   Email
                 </h3>
                 <a
-                  href="mailto:hello@aarya.design"
+                  href="mailto:meghasahu765@gmail.com"
                   className="text-primary-600 hover:text-accent-gold transition-colors"
                 >
-                  hello@aarya.design
+                  meghasahu765@gmail.com
                 </a>
               </div>
             </div>
@@ -118,10 +118,10 @@ const Contact = () => {
                   Phone
                 </h3>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+919752007456"
                   className="text-primary-600 hover:text-accent-gold transition-colors"
                 >
-                  +1 (234) 567-890
+                  +91 97520 07456
                 </a>
               </div>
             </div>
@@ -133,11 +133,10 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-sans font-semibold text-primary-900 mb-2">
-                  Office
+                  Location
                 </h3>
                 <p className="text-primary-600">
-                  123 Design Street<br />
-                  Creative City, CC 12345
+                  Raipur, Chhattisgarh 492001
                 </p>
               </div>
             </div>

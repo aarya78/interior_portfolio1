@@ -11,6 +11,7 @@ import logo from '../assets/logo (1).png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHeroVisible, setIsHeroVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +20,19 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const hero = document.getElementById('home');
+    if (!hero) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => setIsHeroVisible(entry.isIntersecting));
+      },
+      { root: null, threshold: 0.5 }
+    );
+    obs.observe(hero);
+    return () => obs.disconnect();
   }, []);
 
   const handleNavClick = (href) => {
@@ -30,14 +44,12 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
+  const navBgClass = isScrolled || isOpen ? 'bg-white shadow-lg py-4' : 'bg-transparent py-6';
+
+  const mobileIconClass = !isScrolled && isHeroVisible && !isOpen ? 'text-white' : 'text-primary-900';
+
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-lg py-4'
-          : 'bg-transparent py-6'
-      }`}
-    >
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${navBgClass}`}>
       <div className="container-custom px-4 md:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -62,8 +74,10 @@ const Navbar = () => {
                 key={link.name}
                 onClick={() => handleNavClick(link.href)}
                 className={`font-sans text-sm tracking-wider transition-colors duration-300 ${
-                  isScrolled
-                    ? 'text-primary-900 hover:text-accent-gold'
+                  // When the hero section is visible and user hasn't scrolled,
+                  // use white nav links for contrast against the background images.
+                  !isScrolled && isHeroVisible
+                    ? 'text-white hover:text-accent-gold/90'
                     : 'text-primary-900 hover:text-accent-gold'
                 }`}
               >
@@ -84,14 +98,11 @@ const Navbar = () => {
           </motion.button>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2"
-          >
+          <button onClick={() => setIsOpen(!isOpen)} className={`md:hidden p-2 ${mobileIconClass}`}>
             {isOpen ? (
-              <X size={24} className="text-primary-900" />
+              <X size={24} className={mobileIconClass} />
             ) : (
-              <Menu size={24} className="text-primary-900" />
+              <Menu size={24} className={mobileIconClass} />
             )}
           </button>
         </div>
@@ -102,7 +113,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden mt-6 pb-6 border-t border-primary-200 pt-6"
+            className="md:hidden mt-6 pb-6 border-t border-primary-200 pt-6 bg-white"
           >
             {navLinks.map((link) => (
               <button
