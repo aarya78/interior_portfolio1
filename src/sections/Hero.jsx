@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
 import slide1 from '../assets/Projects/slide-1.jpeg';
 import slide2 from '../assets/Projects/slide-2.jpeg';
 import slide3 from '../assets/Projects/slide-3.jpeg';
