@@ -22,7 +22,7 @@ const Hero = ({ onViewProjects }) => {
 
     return () => clearInterval(id);
   }, [totalSlides]);
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -91,7 +91,7 @@ const Hero = ({ onViewProjects }) => {
           variants={itemVariants}
           className="font-sans text-xs sm:text-sm md:text-base font-semibold text-accent-gold uppercase tracking-widest mb-4 mt-6 md:mt-20"
         >
-          Welcome to Aesthetic Spaces
+          Welcome to Tattva Interior
         </motion.p>
 
         {/* Main Heading */}
@@ -99,7 +99,7 @@ const Hero = ({ onViewProjects }) => {
           variants={itemVariants}
           className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 sm:mb-6 leading-[1.1]"
         >
-          Megha Sahu
+          Tattva
         </motion.h1>
 
         {/* Divider Line */}
@@ -113,7 +113,7 @@ const Hero = ({ onViewProjects }) => {
           variants={itemVariants}
           className="font-serif text-lg sm:text-xl md:text-2xl lg:text-4xl text-gray-100 mb-4 sm:mb-6 md:mb-8 max-w-xl sm:max-w-2xl mx-auto px-2"
         >
-          Designing Spaces That Inspire
+          Space That Reflect To How You Are
         </motion.p>
 
         {/* Description */}
@@ -121,7 +121,7 @@ const Hero = ({ onViewProjects }) => {
           variants={itemVariants}
           className="font-sans text-sm sm:text-base md:text-lg text-gray-200 max-w-sm sm:max-w-xl md:max-w-2xl mx-auto mb-6 md:mb-12 leading-relaxed px-2 sm:px-0"
         >
-          Transform your living spaces into extraordinary environments that reflect your personality and elevate your lifestyle. With a keen eye for detail and a passion for design excellence.
+          A space is more than walls and furniture—it is a reflection of your personality, lifestyle, and aspirations. At Tatva, we create thoughtfully designed interiors that blend elegance, comfort, and functionality to deliver spaces that feel truly yours.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -129,55 +129,15 @@ const Hero = ({ onViewProjects }) => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 md:mb-16 w-full max-w-xs mx-auto px-4"
         >
-          <button
-            onClick={onViewProjects}
-            className="w-full sm:w-auto px-6 py-3 btn-primary text-sm sm:text-base"
+          {/* Replace CTA with a tel: link so mobile devices open the phone dialer. Update the number below as needed. */}
+          <a
+            href="tel:+919752007456"
+            className="w-full sm:w-auto inline-block px-6 py-3 btn-primary text-sm sm:text-base text-center"
           >
-            View Projects
-          </button>
-          <button
-            onClick={() => {
-              const element = document.getElementById('about');
-              element?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="w-full sm:w-auto px-6 py-3 border-2 border-white text-white bg-white/10 font-sans font-medium rounded-none transition-all duration-300 hover:bg-white/20 uppercase tracking-wider text-sm sm:text-base"
-          >
-            Learn More
-          </button>
-        </motion.div>
-
-        {/* Scroll Indicator (centered) */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.6 }}
-          className="absolute left-1/2 bottom-6 md:bottom-10 transform -translate-x-1/2 pointer-events-none"
-          aria-hidden
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center gap-2"
-          >
-            <span className="font-sans text-xs text-gray-200 uppercase tracking-wider">
-              Scroll to Explore
-            </span>
-            <ChevronDown size={20} className="text-accent-gold" />
-          </motion.div>
+            Book Your Consultant
+          </a>
         </motion.div>
       </motion.div>
-
-      {/* Decorative Elements */}
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-        className="absolute top-1/4 right-1/4 w-1 h-1 bg-accent-gold rounded-full opacity-30"
-      />
-      <motion.div
-        animate={{ rotate: -360 }}
-        transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
-        className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-primary-900 rounded-full opacity-30"
-      />
     </section>
   );
 };

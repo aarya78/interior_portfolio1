@@ -13,9 +13,9 @@ const Projects = ({ selectedProject, onSelectProject }) => {
   const filteredProjects = activeFilter === 'all'
     ? projects
     : projects.filter(
-        project =>
-          project.category === activeFilter || project.style === activeFilter
-      );
+      project =>
+        project.category === activeFilter || project.style === activeFilter
+    );
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -48,10 +48,14 @@ const Projects = ({ selectedProject, onSelectProject }) => {
           className="text-center mb-16"
         >
           <h2 className="section-title">
-            Featured Projects
+            Tattva Design Gallery
           </h2>
           <p className="section-subtitle">
-            Explore our portfolio of exceptional interior design projects across residential and commercial spaces.
+            Every project in our portfolio is a reflection of thoughtful design, refined craftsmanship, and attention to detail.<br/>
+            From elegant residences to contemporary commercial spaces, our work is guided by a simple philosophy—creating environments that feel timeless, functional, and deeply personal.<br/>
+            Each space tells its own story through carefully selected materials, balanced proportions, and purposeful design decisions. Explore our gallery and discover how ideas are transformed into beautifully crafted experiences.<br/>
+            A collection of spaces designed not just to be seen, but to be lived  in.
+
           </p>
         </motion.div>
 
@@ -67,11 +71,10 @@ const Projects = ({ selectedProject, onSelectProject }) => {
             <motion.button
               key={filter.value}
               onClick={() => setActiveFilter(filter.value)}
-              className={`px-6 py-3 font-sans font-medium text-sm uppercase tracking-wider transition-all duration-300 border-2 rounded-none ${
-                activeFilter === filter.value
+              className={`px-6 py-3 font-sans font-medium text-sm uppercase tracking-wider transition-all duration-300 border-2 rounded-none ${activeFilter === filter.value
                   ? 'bg-primary-900 text-white border-primary-900'
                   : 'bg-white text-primary-900 border-primary-900 hover:border-accent-gold'
-              }`}
+                }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               variants={itemVariants}

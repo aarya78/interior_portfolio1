@@ -30,11 +30,11 @@
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl font-serif font-semibold text-primary-900 mb-12 text-center;
+    @apply text-4xl md:text-5xl font-serif font-semibold text-[#191970] mb-12 text-center ;
   }
 
   .section-subtitle {
-    @apply text-lg text-primary-600 text-center max-w-2xl mx-auto mb-8;
+    @apply text-lg text-primary-600 text-center max-w-5xl mx-auto mb-8 ;
   }
 
   .section-padding {

@@ -40,65 +40,58 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center"
+          className="lg:gap-16 items-center"
         >
-          {/* Image */}
-          <motion.div
-            variants={itemVariants}
-            className="relative"
-          >
-            <motion.img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop"
-              alt="Aarya Pandey"
-              className="w-full h-auto rounded-lg shadow-2xl"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.4 }}
-            />
-            {/* Decorative Frame */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="absolute -bottom-8 -right-8 w-40 h-40 border-2 border-accent-gold rounded-lg"
-            />
-          </motion.div>
-
           {/* Content */}
           <motion.div variants={containerVariants}>
             {/* Title */}
-            <motion.div variants={itemVariants} className="mb-8">
-              <h2 className="font-serif text-4xl md:text-5xl font-semibold text-primary-900 mb-4">
-                About Me
-              </h2>
-              <div className="h-1 w-20 bg-gradient-to-r from-primary-900 to-accent-gold" />
+            <motion.div variants={itemVariants} className="mb-8 ">
+
             </motion.div>
+
+            <motion.h2 variants={itemVariants} className="section-title">
+              The Essence Of Tattva
+              <div className="h-1 w-52 bg-gradient-to-r mx-auto mt-4 from-primary-900 to-accent-gold" />
+            </motion.h2>
 
             {/* Description */}
             <motion.p
               variants={itemVariants}
               className="font-sans text-base md:text-lg text-primary-600 leading-relaxed mb-6"
             >
-              Hello! I'm Megha Sahu, a passionate interior designer with over 3 years of experience in transforming spaces. My journey in design started with a simple belief: every space has a story to tell.
+              The word “Tatva” represents the fundamental essence of creation. Inspired by this philosophy, we design spaces that are rooted in balance, purpose, and beauty.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="font-sans text-base md:text-lg text-primary-600 leading-relaxed mb-8"
             >
-              I specialize in creating bespoke interior solutions that seamlessly blend aesthetics with functionality. Whether it's a cozy residential apartment or a grand commercial space, I bring creativity, precision, and passion to every project.
+              We believe every project deserves a unique identity. Through thoughtful planning, refined aesthetics, and attention to detail, we create spaces that feel authentic, elegant, and deeply personal.
             </motion.p>
+
+            <motion.h2 variants={itemVariants} className="section-title">
+              The Design Mind Behind Tattva
+              <div className="h-1 w-52 bg-gradient-to-r mx-auto mt-4 from-primary-900 to-accent-gold" />
+            </motion.h2>
 
             {/* Philosophy */}
             <motion.div
               variants={itemVariants}
-              className="bg-primary-50 p-8 mb-8 border-l-4 border-accent-gold"
+              className="bg-primary-50 p-8 mb-8 border-l-4 border-[#191970]"
             >
-              <h3 className="font-sans font-semibold text-primary-900 mb-3 uppercase tracking-wide text-sm">
-                Design Philosophy
-              </h3>
-              <p className="font-serif text-lg text-primary-700 italic">
-                "Design is not just about making things beautiful; it's about making them meaningful. Every element should serve a purpose and tell a part of your story."
+              <p className="text-lg text-primary-700 font-extrabold mb-2 uppercase tracking-wide">
+                "Founder & Interior Designer"
               </p>
+              <motion.p
+                variants={itemVariants}
+                className="font-sans text-base md:text-lg text-primary-600 leading-relaxed mb-8"
+              >
+                Hi There, I'm <b>Megha Sahu</b>, Design has always been more than a profession for me—it’s a way of transforming how people experience their surroundings.<br /> <br />
+                My passion lies in creating spaces that are not only visually beautiful but also meaningful, practical, and tailored to the people who use them every day.<br /><br />
+                At Tatva, I personally guide each project from concept to completion, ensuring every detail reflects the client’s vision while maintaining a timeless design approach.<br /><br />
+                I believe that great interiors should inspire, comfort, and tell a story—and that’s exactly what I strive to creating.
+
+              </motion.p>
             </motion.div>
 
             {/* Stats */}
@@ -114,7 +107,7 @@ const About = () => {
                     variants={itemVariants}
                     className="text-center"
                   >
-                    <Icon className="w-8 h-8 text-accent-gold mx-auto mb-3" />
+                    <Icon className="w-8 h-8 text-[#191970] mx-auto mb-3" />
                     <p className="font-serif text-2xl md:text-3xl font-bold text-primary-900 mb-2">
                       {stat.number}
                     </p>
